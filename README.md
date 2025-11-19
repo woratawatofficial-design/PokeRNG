@@ -4,7 +4,7 @@
 เขียนด้วย HTML + CSS + JavaScript
 
 ## วิธีใช้งาน
-เปิดไฟล์ `index.html` ในเบราว์เซอร์ได้เลย  
+กดLink https://woratawatofficial-design.github.io/PokeRNG/ ที่ deployผ่าน github ได้เลย
 จะมีปุ่มให้กดสุ่มโปเกมอน พร้อมแสดงชื่อและรูปภาพ
 
 ## ฟีเจอร์
