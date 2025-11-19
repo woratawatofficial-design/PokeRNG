@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+* {
+    font-family: "Press Start 2P", system-ui;
+}
+body {
+  background-color: #1b1b1b;
+  color: white;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 875px;
+    height: 1200px;
+    
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: #C79D3A;
+    border: 10px solid #7f6423;
+    /* border-style: solid; */
+    border-radius: 20px;
+    /* padding: 30px; */
+    padding-top: 50px;
+}
+
+.title{
+    font-size: 45px;
+    
+}
+
+.screen{
+    display: flex;
+    position:relative;
+    margin: 10px;
+    /* justifyคือกลางบน */
+    justify-content: center;
+    align-items: center;
+    width: 735px;
+    height: 717px;
+    flex-shrink: 0;
+    border: 10px solid #7f6423;
+    border-radius: 20px;
+    background-color: #8C6815;
+}
+.sky-bg{
+    position: absolute;
+    /*  กำหนดขนาดของ bg ตามframe (screenตามfig */
+    width: 100%;
+    height: 100%;
+    /* z indexยิ้่งเลขน้อยยิ่งอยู่หลัง */
+    z-index: 1; 
+    border-radius: 10px;
+}
+.rolltxt{
+    position: relative;
+    z-index: 2;
+    font-size: 65px;
+    
+}
+/* rollbutton */
+.rollbutton{
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 2;
+    margin-top: 95px;
+
+}
+.rollimg{
+    width: 230px;
+}
+
+.rollbutton {
+    transition: transform 0.1s ease; 
+}
+/* .rollbutton:active {
+    transform: scale(0.55);
+} */
+.rollbutton:hover{
+    transform: scale(0.95);
+}
+/* rollbutton */
+
+/* ปุ่มinventory */
+.invenbutton{
+    background: none;
+    border: none;
+}
+.invimg {
+    position: absolute;
+    top: 60px;
+    width: 80px;
+    right: 7.5%;
+    z-index: 3;
+}
+.invimg{
+    transition: transform 0.1s ease;
+}
+.invimg:hover{
+    transform: scale(0.95);
+}
+/* ปุ่มinventory */
+.reddot{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: rgba(221, 19, 19, 0.988);
+    border-radius: 100px;
+    right:50px;
+    z-index: 3;
+}
+
+/* ปุ่มsettings */
+.settingbutton{
+    background: none;
+    border: none;
+}
+.settingimg{
+    position: absolute;   
+    top: 60px;
+    width: 80px;
+    left: 7.5%;
+    z-index: 3;
+    transition: transform 0.1 ease;
+}
+
+.setting-screen h2{
+    font-size: 40px;
+    position: relative;
+    bottom:220px;
+}
+
+.settingimg:hover{
+    transform: scale(0.95);
+}
+/* setting */
+
+/* inventory noti */
+
+/* AFTER JAVASCRIPT !!!! */
+.pokemon-name{
+    display: none;
+    position: absolute;
+    top: 20px;
+    z-index: 4;
+    font-size: 50px;
+    font-weight: bolder;
+    -webkit-text-stroke:0.5px;
+    -webkit-text-stroke-color: #3c3c3c;
+
+}
+.rarity{
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    align-items: center;
+    z-index: 4;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3c3c3c;
+    font-size: 50px;
+    font-weight: bold;
+    /* font-weight: 1400; */
+
+    
+}
+
+#pokemon-img {
+    display: none; /* display none เพื่อซ่อน (ผมอยากให้appearหลังสุ่ม)*/
+    z-index: 3;
+    width: 450px; 
+}
+/* ปุ่ม accept decline */
+.skipbutton,
+.acceptbutton{
+    display: none;
+    background: none;
+    border: none;
+    margin-top: 95px;
+}
+.acceptimg,
+.skipimg{
+    width: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: transform 0.1 ease-in;
+}
+.acceptimg:hover{
+    transform: scale(0.95);
+}
+.skipimg:hover{
+    transform: scale(0.95);
+}
+
+
+/* INVENTORY */
+.inventoryinspect h2{
+    font-size: 40px;
+    position: fixed;   
+    top: 20%;           
+    left: 50%;
+    /* ขยับตัวเองครึ่งขนาดตัวเองทั้งแนวนอนและแนวตั้ง */         
+    transform: translate(-50%, -50%);
+/* INVENTORY BACK */
+
+/* back buttonของ inv */
+}
+.backbutton{   
+    background:none;
+    border: none;
+    margin: 90px; 
+}
+.backimg{
+    width: 82px;
+    position: absolute;
+    top: 62px;
+    right: 7.5%;
+    z-index: 3;
+    transition: transform 0.1 ease-in;    
+}
+
+.backimg:hover{
+    transform: scale(0.95);
+}
+
+/* back button ของ setting */
+
+.backbutton2{   
+    background:none;
+    border: none;
+    margin: 90px; 
+}
+.backimg2{
+    width: 82px;
+    position: absolute;
+    top: 62px;
+    left: 7.5%;
+    z-index: 3;
+    transition: transform 0.1 ease-in;    
+}
+
+.backimg2:hover{
+    transform: scale(0.95);
+}
+
+/* ปุ่ม + */
+.expand{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #C79D3A;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    font-size: 40px;
+    color: white;
+    transition: transform 0.1 ease;
+}
+.expand:hover{
+    transform: scale(0.95);
+}
+
+
+/* animation เอาไปใส่ใน javascript .classList.add*/
+.pokemonimg.pop {
+    animation: popOut 0.4s ease;
+}
+
+@keyframes popOut {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ปุ่มautoskip,autoroll */
+
+.autoroll{
+    position :absolute;
+    bottom: 265px;
+    width: 240px;
+    height: 60px;
+    border-radius: 15px;
+    background-color:#ff4949;
+    z-index: 3;
+    transition: transform 0.1 ease;  
+}
+.autoroll:hover{
+    transform: scale(0.95);
+}
+
+
+/* setting */
+
+.auto-skip-settings{
+    display: none;
+}
+
+.autotxt{
+    position: relative;
+    bottom: 235px;
+    font-size: 35px;
+}
+.lbl{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    position: absolute;
+    top: 170px;
+    gap: 60px;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+}
+
+.lbl input[type="checkbox"]{
+    transform: scale(4);
+    accent-color: #ff6161;
+}
+.vol{
+    position: relative;
+    top: 180px;
+    font-size: 35px;
+}
+.voltxt{
+    font-size: 30px;
+    position: relative;
+    top: 190px;
+    
+}
+input[type="range"] {
+  width: 400px;
+  cursor: pointer;
+  position: relative;
+  top: 180px;
+}
+
+/* inventory screen */
+.inventoryinspect {
+    position: absolute;
+    width: 100%;             
+    height: 100%;            
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;       
+    border-radius: 20px;    
+    z-index: 2;           
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    width: 100%; 
+}
+
+.gridcontainer img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: #C79D3A;
+    margin: 0 auto;
+    
+}
+/* LOG IN*/
+.container2{
+display:flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    width: 875px;
+    height: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: #C79D3A;
+    border: 10px solid #7f6423;
+    /* border-style: solid; */
+    border-radius: 20px;
+    /* padding: 30px; */
+    padding-top: 50px;
+    
+}
+.title2{
+    font-size: 45px; 
+}
+
+.screen2{
+    display: flex;
+    position:relative;
+    margin: 10px;
+    /* justifyคือกลางบน */
+    justify-content: center;
+    align-items: center;
+    width: 735px;
+    height: 950px;
+    flex-shrink: 0;
+    border: 10px solid #7f6423;
+    border-radius: 20px;
+    background-color: #8C6815;
+    
+}
+.mainimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+.btn2{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.loginbtn,
+.createbtn{
+    background-color: #C79D3A;
+    border-radius: 25px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: #1b1b1b
+}
+.loginbtn:hover{
+    transform: scale(0.95);
+}
+.playstyle{
+    text-decoration: none;
+}
+.playstyle h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
