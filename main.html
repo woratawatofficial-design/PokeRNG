@@ -3,46 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKE-RNG</title>
     <link rel="stylesheet" href="style.css">
-    <title>POKE-RNG LOG IN</title>
+    <link rel="icon" href="data:,">
+
 </head>
 <body>
-    <div class="container2">
-        <h2 class="title2">POKE-RNG</h2>
 
-        <div class="screen2">
-            <div id="logininfo" class="log-in-info" style="display: none;">
-                <label for="username">Enter username</label>
-                <input type="text" placeholder="Enter username" name="username" required>
-                <br>
-                <label for="password">Enter password</label>
-                <input type="text" placeholder="Enter password" password = "password" required>
-            </div>
-            <div id="signupnfo" class="sign-up-info" style="display: none;">
-                <label for="username">Enter username</label>
-                <input type="text" placeholder="Enter username" name="username" required>
-                <br>
-                <label for="password">Enter password</label>
-                <input type="text" placeholder="Enter password" password = "password" required>
-            </div>
-            <img src="pic/pokeroll.jpg" alt="pokemonimage" class="mainimg">
+<!-- box -->
+ <div class="container">
+     <h1 id="titlename" class="title">POKE-RNG</h1>
+     <h1 id="inventorytitlename" class="inventorytitle" style="display: none;">INVENTORY</h1>
+     <h1 id="settingtitlename" class="settingtitle" style="display: none;">SETTINGS</h1>
 
-            <div id="btns2" class="btn2">
-            <button id="login" class="loginbtn">
-                <a href="index.html" class="playstyle"><h2>PLAY</h2></a>
-            </button>
-            </div>
-
-            </div>
+    <!-- screen -->
+     <div class="screen">
+        <img src="pic/sky.png" alt="background" class="sky-bg" id="sky">
+        <img src="pokemonpic/" id="pokemon-img" class= "pokemonimg" style="display:none;">
+        <p id="rolltext" class="rolltxt">Roll!</p>
+        <p id= "pokemonname" class="pokemon-name">Magikarp</p> 
+        <p id = "pokemonraritytext" class="rarity">1 in 2</p>
+        <!-- inventory -->
+        <div id="inventoryscreen" style="display:none;" class="inventoryinspect">
+            <!-- <h2>INVENTORY</h2> -->
+            <button id="plus" class="expand" style="display: none;"></button>
+            <p style="display: none;">INVENTORY FULL</p>
+             <div id="inventorygrid" class="gridcontainer"></div>
         </div>
+        <!-- setting screen -->
+        <div id="settingscreen" class="setting-screen" style="display: none;">
 
-        <div id="sound-setting" class="soundsetting">
-                    <input type="range" id="volume" class="volslide" min="0" max="100" value="50" style="display: none;">
-                    <audio id="bgm" src="sound/Mainmenu.mp3" loop></audio>
+            <!-- <h2>SETTINGS</h2> -->
+
+            <div id = "autoskipsetting" class="auto-skip-settings">
+                
+                <h3 class="autotxt">Auto-Skip Settings</h3>
+
+                <div id="label" class ="lbl">
+                <label><input type="checkbox" value="Common" checked> Common</label>
+                <label><input type="checkbox" value="Uncommon" checked> Uncommon</label>
+                <label><input type="checkbox" value="Rare" checked> Rare</label>
+                <label><input type="checkbox" value="Epic" checked> Epic</label>
+                <label><input type="checkbox" value="Ultrarare" checked> Ultrarare</label>
+                <label><input type="checkbox" value="Legendary" checked> Legendary</label>
+                <label><input type="checkbox" value="Origin" checked> Origin</label>
+                <label><input type="checkbox" value="Secret" checked> Secret</label>
+                </div>
             </div>
+                <!-- volume -->
+              <div id="sound-setting" class="soundsetting">
+                    <h3 class = "vol">Volume</h3>   
+                    <label for="volume" class="voltxt">MUSIC</label>
+                    <input type="range" id="volume" class="volslide" min="0" max="100" value="50">
+                    <span id="volume-value"></span>
+                    <audio id="bgm" src="sound/MAY be happy summer opening.mp3" loop></audio>
+                </div>
+        </div>
+        
+     </div>
 
-<script src="main.js"></script>
-
+     <!-- button -->
+      <div id="button" class="btn">
+        <button id="skip-btn" class="skipbutton"><img src="pic/red.png" alt="declinebutton" class="skipimg"></button>
+        <button id="roll-btn" class="rollbutton"><img src="pic/Hope.png" class="rollimg" alt=""></button>
+        <button id="accept-btn" class="acceptbutton"><img src="pic/green.png" alt="acceptbutton" class="acceptimg"></button>
+        
+        <button id="back-btn" class="backbutton" style="display: none;"><img src="pic/x.png" alt="back button" class="backimg"></button>
+        <button id="back-btn2" class="backbutton2" style="display: none;"><img src="pic/x.png" alt="back button2" class="backimg2"></button>
+      </div>
+    <button id="inven-btn" class="invenbutton"><img src="pic/inventory.png" alt="" class="invimg"></button>
+    <button id="setting-btn" class="settingbutton"><img src="pic/setting.png" alt="settingbutton" class="settingimg"></button>
+    <button id="auto-roll" class="autoroll">AutoRoll : off</button>
+        <div id="noti" class="reddot"></div>
+ </div>
     
+<script src="script.js"></script>
+
 </body>
 </html>
