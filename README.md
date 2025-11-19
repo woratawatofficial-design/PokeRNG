@@ -11,6 +11,10 @@
 - สุ่มโปเกมอนแบบสุ่มทุกครั้ง
 - แสดงรูป + ชื่อโปเกมอน
 - UI เรียบง่าย
+- มีระบบ Storage เก็บ Pokemon ที่ได้
+- มีระบบ Auto Roll
+- มีระบบ Auto Delete Pokemon
+  
 
 ## ผู้พัฒนา
-- Mark
+- Woratawat Karumdecha
